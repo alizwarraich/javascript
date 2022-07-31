@@ -18,8 +18,10 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
     chooseOperation(operation) {
-        if (this.currentOperand === "")
+        if (this.currentOperand === "") {
+            this.operation = operation
             return
+        }
         if (this.previousOperand !== '')
             this.compute()
         this.operation = operation
